@@ -16,8 +16,8 @@ class Agent:
         # self.chroma_tool = ChromaVectorTool()
         self.web_tool = DuckDuckGoWebReaderTool()
 
-        tokenizer = AutoTokenizer.from_pretrained("Doctor-Shotgun/TinyLlama-1.1B-32k-Instruct", token='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')
-        model = AutoModelForCausalLM.from_pretrained("Doctor-Shotgun/TinyLlama-1.1B-32k-Instruct", token='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')
+        tokenizer = AutoTokenizer.from_pretrained("Doctor-Shotgun/TinyLlama-1.1B-32k-Instruct", token='')
+        model = AutoModelForCausalLM.from_pretrained("Doctor-Shotgun/TinyLlama-1.1B-32k-Instruct", token='')
         pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
         self.llm = HuggingFacePipeline(pipeline=pipe)
 
